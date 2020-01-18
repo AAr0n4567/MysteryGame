@@ -1,14 +1,14 @@
 fileFormatVersion: 2
 guid: e76c6158cd281cf4393ed74e4aa382cf
 ModelImporter:
-  serializedVersion: 26
+  serializedVersion: 19300
   internalIDToNameTable:
   - first:
       74: -203655887218126122
     second: mixamo.com
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -70,9 +70,15 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
+  referencedClips:
+  - 8f3d7f810d91e7a42a65df675568960e
+  - 42b2ea5b88c2b1346a70634d13901fef
+  - 9da9942804fde9a4582c424a6545e3ca
+  - 27d7f76b190d0dd4d9798e27c2e319e5
+  - 5f08e494b44c6844a81cee985bff3f25
+  - c6e10a7c6525f7a4fa108a6f30a574b3
+  - ea6f82bf797c8f1468854103bd1dfd51
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
     serializedVersion: 3
     human: []
@@ -90,8 +96,10 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
