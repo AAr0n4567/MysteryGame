@@ -8,18 +8,43 @@ public class PlayerMovement : MonoBehaviour
     public Animator anim;
     public float walkSpeed;
     public float runSpeed;
+    
 
-    Vector2 input;
+    Vector3 input;
     private void Start()
     {
         player = GetComponent<Rigidbody>();
     }
     private void Update()
     {
-        input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        input = Vector2.ClampMagnitude(input, 2);
+        input = new Vector3(Input.GetAxis("Horizontal"),0, Input.GetAxis("Vertical"));
+        input = Vector3.ClampMagnitude(input, 2);
 
         anim.SetFloat("MoveX", input.x);
-        anim.SetFloat("MoveY", input.y);
+        anim.SetFloat("MoveY", input.z);
+
+        player.velocity = input * walkSpeed;
+
+        Debug.Log("player Velocity" + player.velocity);
+
+        // Keep player rotation
+        if(input.x != 0)
+        {
+            transform.forward = player.velocity;
+        }
+        else
+        {
+            transform.forward = transform.forward;
+        }
+        if (input.z != 0)
+        {
+            transform.forward = player.velocity;
+        }
+        else
+        {
+            transform.forward = transform.forward;
+        }
+
     }
+
 }
